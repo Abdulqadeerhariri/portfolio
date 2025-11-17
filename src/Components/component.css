@@ -1,0 +1,36 @@
+a{
+    color: white;
+}
+
+input {
+    border: 1px solid gray;
+    width: 200px;
+    height: 30px;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 5px;
+    font-size: small;
+}
+
+.mail {
+    width: 430px;
+    height: 40px;
+}
+
+textarea {
+    border: 1px solid gray;
+    height: 100px;
+    width: 430px;
+    outline: none;
+    padding-left: 5px;
+}
+
+.bg {
+    border: none;
+    outline: none;
+}
+
+.color {
+    color: black;
+    transition: none;
+}
