@@ -8,7 +8,7 @@ const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ dark, toggleTheme }}>
-      <div className={dark ? 'bg-neutral-800 text-white min-h-dvh' : 'bg-neutral-200 text-black min-h-screen'}>
+      <div className={dark ? 'dark-mode bg-slate-950 text-white min-h-screen transition-colors duration-500' : 'light-mode bg-slate-50 text-black min-h-screen transition-colors duration-500'}>
         {children}
       </div>
     </ThemeContext.Provider>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './component.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSms, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
@@ -6,55 +6,77 @@ import { faGithub, faLinkedin, faFacebook, faInstagram } from '@fortawesome/free
 
 const Contact = () => {
   return (
-    <div className="contact flex flex-row justify-evenly items-top mt-38">
-      {/* left side menu */}
-      <div className="left-side flex flex-col gap-y-10">
-        <div className="title text-blue-600">
-          <h1 className='font-bold mb-4'>Get in Tuch</h1>
-          <p className='text-sm'>I'd like to hear from you!</p>
+    <section className="contact section px-6 py-20">
+      <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-2">
+        <div className="rounded-4xl border border-white/10 bg-slate-900/80 p-8 shadow-2xl">
+          <div className="space-y-6">
+            <div className="space-y-3">
+              <p className="text-sm uppercase tracking-widest text-emerald-300">Get in Touch</p>
+              <h2 className="text-4xl font-semibold text-white">I'd love to hear from you</h2>
+              <p className="max-w-xl text-slate-300">If you have an idea, a project, or just want to say hi, feel free to send a message and I’ll respond as soon as possible.</p>
+            </div>
+
+            <div className="flex items-start gap-4 rounded-3xl border border-white/10 bg-slate-950/80 p-5">
+              <div className="rounded-3xl bg-emerald-400/10 p-4 text-emerald-300">
+                <FontAwesomeIcon icon={faSms} />
+              </div>
+              <div>
+                <p className="text-sm uppercase tracking-widest text-emerald-300">Email</p>
+                <p className="mt-2 text-lg font-semibold text-white">qadeerhariri700@outlook.com</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-slate-950/80 p-5">
+              <div className="flex items-center gap-4">
+                <div className="rounded-3xl bg-slate-800/90 p-4 text-white">
+                  <FontAwesomeIcon icon={faThumbsUp} />
+                </div>
+                <div>
+                  <p className="text-sm uppercase tracking-widest text-emerald-300">Social</p>
+                  <p className="mt-2 text-lg font-semibold text-white">Instagram • Facebook • GitHub • LinkedIn</p>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-3 text-sm text-slate-300">
+                <span className="rounded-2xl bg-white/5 px-4 py-2">Instagram</span>
+                <span className="rounded-2xl bg-white/5 px-4 py-2">Facebook</span>
+                <span className="rounded-2xl bg-white/5 px-4 py-2">GitHub</span>
+                <span className="rounded-2xl bg-white/5 px-4 py-2">LinkedIn</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="second-info">
-          <p className='text-sm mb-9'>if you have any idea or justify wanna<br />
-            say hi, please use the contact form!
-          </p>
-        </div>
-        <div className="mail text-xl font-bold">
-          <p><FontAwesomeIcon icon={faSms} className='mr-3.5' /> qadeerhariri700@outlook.com</p>
-        </div>
-        <div className="last-contact flex flex-row items-center gap-x-10 text-2xl">
-          <div className="like"><FontAwesomeIcon icon={faThumbsUp} /></div>
-          <div className="social-media flex flex-row items-center gap-x-2.5">
-            <FontAwesomeIcon icon={faInstagram} />
-            <FontAwesomeIcon icon={faFacebook} />
-            <FontAwesomeIcon icon={faGithub} />
-            <FontAwesomeIcon icon={faLinkedin} />
+
+        <div className="rounded-4xl border border-white/10 bg-slate-900/80 p-8 shadow-2xl">
+          <div className="grid gap-6">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label className="block text-sm font-medium text-slate-300">First Name</label>
+                <input type="text" className="input-field mt-2 w-full" placeholder="First name" />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-300">Last Name</label>
+                <input type="text" className="input-field mt-2 w-full" placeholder="Last name" />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-slate-300">Email</label>
+              <input type="email" className="input-field mt-2 w-full" placeholder="you@example.com" />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-slate-300">Message</label>
+              <textarea className="input-field mt-2 h-36 w-full resize-none" placeholder="Write your message..." />
+            </div>
+
+            <button className="button-primary w-full rounded-full px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300">
+              Send Message
+            </button>
           </div>
         </div>
       </div>
-      {/* right side menu */}
-      <div className="right-side flex flex-col gap-y-7">
-        <div className="introduction flex flex-row gap-x-5">
-          <div className="firstname">
-            <p>First Name</p>
-            <input type="text"/>
-          </div>
-          <div className="lastname">
-            <p>Last Name</p>
-            <input type="text"/>
-          </div>
-        </div>
-        <div className="email">
-          <p>Email</p>
-          <input type="text" className='mail' />
-        </div>
-        <div className="msg">
-          <p>Message</p>
-          <textarea></textarea>
-        </div>
-        <button className='text-white'>Send</button>
-      </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
 export default Contact
